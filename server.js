@@ -1,8 +1,12 @@
 const express = require('express');
 const vite = require('vite');
+const cors = require('cors'); // cors 미들웨어 추가
 
 const app = express();
 const PORT = 5173;
+
+// CORS 미들웨어를 사용하여 모든 도메인에서 접근 허용
+app.use(cors());
 
 // Express 서버가 5173 포트에서 실행되도록 설정
 app.listen(PORT, async () => {
